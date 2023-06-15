@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informações - Seu Produto Tecnológico</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    .grid-item {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Seu Produto Tecnológico</h1>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sales.html">Vendas</a></li>
+        <li><a href="information.html">Informações</a></li>
+        <li><a href="install.html">Instalar Windows 11</a></li>
+        <li><a href="reservations.html">Reservas</a></li>
+        <li><a href="blog.html">Noticias</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <center>
+    <section>
+      <h2>Informações Gerais</h2>
+      <p>Esta seção contém informações gerais sobre computadores e tecnologia.</p>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>Processador</h3>
+          <img src="imagens/processador.jpg" alt="Processador" width="225px" height="150px">
+          <p>Os processadores Intel Core i9 são os mais procurados atualmente no mercado. Os componentes trazem de 6 a 8 núcleos, 12 a 16 threads e velocidades de 4,8 a 5 GHz e contêm 12 a 16 MB de Cache.</p>
+          <button onclick="addToCart('Processador')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="grid-item">
+          <h3>Caixa do computador</h3>
+          <img src="imagens/caixadecomputador.jpg" alt="Caixa do computador" width="225px" height="150px">
+          <p>A caixa do computador serve para proteger todos os componentes internos do computador, como a placa-mãe, placa de vídeo e o HD.A caixa é bem importante porque algumas peças do computador são muito delicadas e não podem sofrer nenhum tipo de batida ou ter acúmulo de pó</p>
+          <button onclick="addToCart('Caixa do computador')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="grid-item">
+          <h3>Memórias RAM</h3>
+          <img src="imagens/memoriasram.jpg" alt="Memórias RAM" width="225px" height="150px">
+          <p>Capacidade: 32 GB (2x 16 GB), Tipo de memória: DDR4, Velocidade de frequência: 3600 MHz, Latência: 16-20-20-38, Tensão: 1.35V, ECC: NON-ECC, Tipo DIMM: Unbuffered</p>
+          <button onclick="addToCart('Memórias RAM')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="grid-item">
+          <h3>Fonte de Alimentação</h3>
+          <img src="imagens/fontedealimentacao.jfif" alt="Fonte de Alimentação" width="225px" height="150px">
+          <p>Conectividade
+            Conector de fonte de motherboard: 20+4 pin ATX;
+            Conector de energia periférico (Molex) (4 pinos): 2;
+            Número de conectores de alimentação SATA: 6;
+            Comprimento do cabo de energia SATA: 150,450 mm;
+            Conector de energia EPS (8 pinos);
+            Pesos e dimensões;
+            Largura do produto: 150 mm;
+            Profundidade da Unidade: 160 mm;
+            Altura da Unidade: 86 mm;
+            Características de potência de protecção: Over current, Voltagem excessiva, Sobrecarga, Curto-circuito, Voltagem insuficiente;
+            Paragem automática para evitar sobreaquecimento: Sim;
+            Refrigeração
+            Diâmetro do ventilador: 14 cm;
+            Número de ventoínhs: 1 fan(s) </p>
+          <button onclick="addToCart('Fonte de Alimentação')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="grid-item">
+          <h3>Refrigerador Líquido (Water Cooler)</h3>
+          <img src="imagens/refrigeradorliquido.jpg" alt="Refrigerador Líquido (Water Cooler)" width="225px" height="150px">
+          <p>O líquido de refrigeração, também conhecido por líquido anticongelante ou até só por anticongelante, é responsável por manter a temperatura do motor da viatura nos níveis ideias.
+            Este líquido tem propriedades que previnem que o motor acumule ferrugem no interior do sistema de refrigeração, evitando a corrosão dos componentes.</p>
+          <button onclick="addToCart('Refrigerador Líquido')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="grid-item">
+          <h3>Placa de Vídeo</h3>
+          <img src="imagens/placadevideo.jfif" alt="Placa de Vídeo" width="225px" height="150px">
+          <p>Memória gráfica GDDR6 de 14000MHz.;
+            Interface de memória: 192bit.;
+            Quantidade de núcleos: 1920.;
+            Frequência boost do núcleo de 1755MHz.;
+            Resolução máxima: 7680x4320.;
+            Compatível com DirectX e OpenGL.;
+            Requer de 500W de alimentação.;
+            Permite a conexão de até 3 monitores simultâneos.;
+            Formatos de conexão: DL-DVI-D, HDMI 2.0b, DisplayPort 1.4.;
+            Ideal para trabalhar em alta velocidad</p>
+          <button onclick="addToCart('Placa de Vídeo')">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+      <!-- Adicione informações e botões para outras peças do computador -->
+    </section>
+  </center>
+
+  <footer>
+    <p>&copy; 2023 Seu Produto Tecnológico. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function addToCart(product) {
+      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      cartItems.push(product);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      alert('Produto adicionado ao carrinho!');
+    }
+
+    function viewDetails(product) {
+      // Implemente a lógica para exibir os detalhes do produto
+      alert(`Detalhes do ${product}`);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #bb9f9f;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+  
+  nav.menu {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  nav.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav.menu ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+  }
+  
+  section {
+    margin: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos específicos para a página de vendas */
+  .product-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .product-list li {
+    margin-bottom: 20px;
+  }
+  
+  .product-list li h3 {
+    margin-top: 0;
+  }
+  
+  .product-list li img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .reserve-form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .reserve-form input[type="text"],
+  .reserve-form input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  .reserve-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos específicos para a página de reservas */
+  .reservation-info {
+    margin-bottom: 10px;
+  }
+  

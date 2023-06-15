@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendas - Seu Produto Tecnológico</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <h1>Seu Produto Tecnológico</h1>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sales.html">Vendas</a></li>
+        <li><a href="information.html">Informações</a></li>
+        <li><a href="install.html">Instalar Windows 11</a></li>
+        <li><a href="reservations.html">Reservas</a></li>
+        <li><a href="blog.html">Noticias</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Produtos à Venda</h2>
+    <ul class="product-list">
+      <li>
+        <img src="imagens/ratogamer.jpg" alt="Rato Gamer">
+        <h3>Rato Gamer</h3>
+        <p></p>
+        <p>Preço: 20€</p>
+        <form class="reserve-form" data-product="Rato Gamer">
+          <label for="client-name">Nome do Cliente:</label>
+          <input type="text" class="client-name" required>
+          <label for="quantity">Quantidade:</label>
+          <input type="number" class="quantity" min="1" value="1" required>
+          <button class="reserve-button">Reservar</button>
+        </form>
+      </li>
+      <li>
+        <img src="imagens/tecladobluetooth.jfif" alt="Teclado Bluetooth">
+        <h3>Teclado Bluetooth</h3>
+        <p>Código de barras: 8056045878304 // Referência: EW3119 | 8056045878304 </p>
+        <p>Preço: 15.90€</p>
+        <form class="reserve-form" data-product="Teclado Bluetooth">
+          <label for="client-name">Nome do Cliente:</label>
+          <input type="text" class="client-name" required>
+          <label for="quantity">Quantidade:</label>
+          <input type="number" class="quantity" min="1" value="1" required>
+          <button class="reserve-button">Reservar</button>
+        </form>
+      </li>
+      <li>
+        <img src="imagens/monitorprofissional.jpg" alt="Monitor profissional 27″">
+        <h3>Monitor profissional 27″ </h3>
+        <p>EAN: 8806090961915 // REF: 8806090961915</p>
+        <p>Preço: 100.89€</p>
+        <form class="reserve-form" data-product="Monitor profissional 27″">
+          <label for="client-name">Nome do Cliente:</label>
+          <input type="text" class="client-name" required>
+          <label for="quantity">Quantidade:</label>
+          <input type="number" class="quantity" min="1" value="1" required>
+          <button class="reserve-button">Reservar</button>
+        </form>
+      </li>
+      <!-- Mais produtos -->
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Seu Produto Tecnológico. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

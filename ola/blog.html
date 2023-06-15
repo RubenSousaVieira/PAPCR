@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notícias de Tecnologia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <center>
+      <img src="imagens/logo.png" alt="Logo" class="logo" style="width: 300px; height: 225px;">
+    </center>
+    <h1>Novidades sobre a tecnologia:</h1>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sales.html">Vendas</a></li>
+        <li><a href="information.html">Informações</a></li>
+        <li><a href="install.html">Instalar Windows 11</a></li>
+        <li><a href="reservations.html">Reservas</a></li>
+        <li><a href="blog.html">Noticias</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="noticias">
+    <!-- Aqui serão inseridas as notícias atualizadas -->
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Notícias de Tecnologia. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    $(document).ready(function() {
+      // Função para obter as notícias dos sites
+      function obterNoticias() {
+        // Obter notícias do TechCrunch em português de Portugal
+        $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https://techcrunch.com/feed&hl=pt-PT', function(data) {
+          adicionarNoticias(data.items);
+        });
+
+        // Obter notícias do segundo site em português de Portugal
+        $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https://example.com/rss-feed&hl=pt-PT', function(data) {
+          adicionarNoticias(data.items);
+        });
+
+        // Obter notícias do terceiro site em português de Portugal
+        $.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https://anotherexample.com/rss-feed&hl=pt-PT', function(data) {
+          adicionarNoticias(data.items);
+        });
+      }
+
+      // Função para adicionar as notícias na página
+      function adicionarNoticias(noticias) {
+        $('#noticias').empty();
+
+        noticias.forEach(function(noticia) {
+          $('#noticias').append('<h3>' + noticia.title + '</h3>');
+          if (noticia.enclosure && noticia.enclosure.link) {
+            $('#noticias').append('<img src="' + noticia.enclosure.link + '">');
+          }
+          $('#noticias').append('<p>' + noticia.description + '</p>');
+        });
+      }
+
+      // Chamar a função de obter as notícias inicialmente
+      obterNoticias();
+
+      // Definir um intervalo para obter as notícias periodicamente
+      setInterval(obterNoticias, 10000); // Atualizar a cada 10 segundos
+    });
+  </script>
+</body>
+
+</html>
